@@ -11,7 +11,6 @@ public class GUI extends JFrame {
     private final List<StopwatchPanel> stopwatches;
 
     public GUI() {
-        // Gunakan tema modern
         try {
             UIManager.setLookAndFeel(new FlatIntelliJLaf());
         } catch (UnsupportedLookAndFeelException e) {
