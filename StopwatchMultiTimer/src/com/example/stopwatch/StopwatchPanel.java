@@ -13,8 +13,7 @@ public class StopwatchPanel extends JPanel {
         JButton startButton = new JButton("Start");
         JButton stopButton = new JButton("Stop");
         JButton resetButton = new JButton("Reset");
-
-        // Gunakan method terpisah agar stopwatch sudah terinisialisasi
+        
         stopwatch = new Stopwatch(this::updateTimeLabel);
 
         startButton.addActionListener(e -> stopwatch.start());
@@ -27,7 +26,6 @@ public class StopwatchPanel extends JPanel {
         add(resetButton);
     }
 
-    // Method untuk memperbarui tampilan waktu
     private void updateTimeLabel() {
         SwingUtilities.invokeLater(() -> timeLabel.setText(formatTime(stopwatch.getElapsedTime())));
     }
